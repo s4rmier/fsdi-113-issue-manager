@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Name | Issues{% endblock title %}
+
+{% block content %}
+
+<main id="issue-list-page">
+    <div class="container">
+        <h1>Issues</h1>
+        <section>
+            {% for issue in issue_list %}
+            <article>
+                <h2>{{ issue.summary }}</h2>
+                <h3>{{ issue.status }}</h3>
+                <h6>{{ issue.id }}</h6>
+            </article>
+            {% endfor %}
+        </section>
+    </div>
+</main>
+
+{% endblock content %}

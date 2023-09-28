@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Name | Delete Issue {% endblock title %}
+
+{% block content %}
+
+<main id="detail-issue-page">
+    <div class="container">
+        <h1>{{ issue.summary }}</h1>
+        <h2>Status: {{ issue.status }}</h2>
+        <h3>Reported by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} | {{ issue.created_on }}</h3>
+        <p>
+            {{ issue.description }}
+        </p>
+    </div>
+</main>
+
+{% endblock content %}
