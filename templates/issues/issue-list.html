@@ -7,11 +7,10 @@
 <main id="issue-list-page">
     <div class="container flex-col">
         <h1>Issues</h1>
-        <hr>
         <button class="create-issue button" onclick="window.location.href = '{% url 'new' %}'">Post an Issue<span><i class="fa-solid fa-plus"></i></span></button>
         <section class="flex-row justify">
             {% for issue in issue_list %}
-                <article class="flex-row">
+                <article class="issue-item flex-row">
                     {% if issue.priority_id == 1 %}
                     <div class="issue-priority red align">
                         <h2 class="priority-value">{{ issue.priority }}</h2>

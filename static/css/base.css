@@ -11,7 +11,7 @@
 }
 * .container {
   width: 90%;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 * .flex-col {
@@ -149,12 +149,12 @@
     margin: 2rem 0rem 1rem;
     font-size: 2rem;
   }
-  main#issue-list-page div.container hr {
-    margin-bottom: 1rem;
-  }
   main#issue-list-page div.container button.create-issue {
     align-self: flex-end;
     margin: 0rem 0rem 2rem;
+  }
+  main#issue-list-page div.container button.create-issue span {
+    background-color: #4DA167;
   }
   main#issue-list-page div.container section {
     flex-wrap: wrap;
@@ -212,5 +212,11 @@
   }
   main#issue-list-page div.container section article div.issue-body div.button-set button.button {
     margin: 0rem 0.5rem;
+  }
+  main#issue-list-page div.container section article div.issue-body div.button-set button.button:nth-child(2) span {
+    background-color: #EAC435;
+  }
+  main#issue-list-page div.container section article div.issue-body div.button-set button.button:nth-child(3) span {
+    background-color: #CE4257;
   }
 }/*# sourceMappingURL=base.css.map */

@@ -23,8 +23,15 @@
                 <h2>Para<span>Docs</span></h2>
             </div>
             <div class="user-panel flex-row align">
-                <h3>Welcome, &nbsp<span>Romnick</span></h2>
+                {% if user.is_authenticated %}
+                <h3>Welcome, &nbsp<span>{{ user.first_name }}</span></h2>
                 <img src="/static/img/profile.jpg" alt="">
+                {% else %}
+                <ul class="flex-row align">
+                    <li>Sign Up</li>
+                    <li>Log In</li>
+                </ul>
+                {% endif %}
             </div>
         </div>
     </nav>
