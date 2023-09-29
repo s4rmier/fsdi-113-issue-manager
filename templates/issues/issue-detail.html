@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} Name | Delete Issue {% endblock title %}
+{% block title %} Paradocs | Issue Details {% endblock title %}
 
 {% block content %}
 
@@ -8,6 +8,7 @@
     <div class="container">
         <h1>{{ issue.summary }}</h1>
         <h2>Status: {{ issue.status }}</h2>
+        <h3>Priority: {{ issue.priority }}</h3>
         <h3>Reported by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} | {{ issue.created_on }}</h3>
         <p>
             {{ issue.description }}

@@ -12,7 +12,8 @@ from .models import Issue
 class IssueCreateView(CreateView):
     template_name = "issues/create-issue.html"
     model = Issue
-    fields = ["summary", "description", "reporter", "assignee", "status"]
+    fields = ["summary", "description", "reporter",
+              "assignee", "status", "priority"]
 
 
 class IssueDeleteView(DeleteView):
@@ -32,6 +33,7 @@ class IssueListView(ListView):
 
 
 class IssueUpdateView(UpdateView):
-    template_name = "issues/issue-update.html"
+    template_name = "issues/update-issue.html"
     model = Issue
-    fields = ["summary", "description", "status"]
+    fields = ["summary", "description", "status", "priority"]
+    success_url = reverse_lazy("list")

@@ -8,9 +8,26 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <script src="https://kit.fontawesome.com/c7dcac8717.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <nav></nav>
+    <nav>
+        <div class="container flex-row align">
+            <ul class="nav-links flex-row align">
+                <li onclick="window.location.href = '{% url 'home' %}'">Home</li>
+                <li onclick="window.location.href = '{% url 'about' %}'">About</li>
+                <li onclick="window.location.href = '{% url 'list' %}'">Issues</li>
+            </ul>
+            <div class="brand-container flex-row align" onclick="window.location.href = '{% url 'home' %}'">
+                <img src="/static/img/logo.svg" alt="">
+                <h2>Para<span>Docs</span></h2>
+            </div>
+            <div class="user-panel flex-row align">
+                <h3>Welcome, &nbsp<span>Romnick</span></h2>
+                <img src="/static/img/profile.jpg" alt="">
+            </div>
+        </div>
+    </nav>
     {% block content %}
     {% endblock content %}
     <script src="{% static 'js/base.js' %}"></script>
