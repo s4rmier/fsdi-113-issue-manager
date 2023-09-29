@@ -28,8 +28,8 @@
                 <img src="/static/img/profile.jpg" alt="">
                 {% else %}
                 <ul class="flex-row align">
-                    <li>Sign Up</li>
-                    <li>Log In</li>
+                    <li onclick="window.location.href = '{% url 'signup' %}'">Sign Up</li>
+                    <li onclick="window.location.href = '{% url 'login' %}'">Log In</li>
                 </ul>
                 {% endif %}
             </div>
