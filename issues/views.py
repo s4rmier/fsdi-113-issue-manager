@@ -35,5 +35,5 @@ class IssueListView(ListView):
 class IssueUpdateView(UpdateView):
     template_name = "issues/update-issue.html"
     model = Issue
-    fields = ["summary", "description", "status", "priority"]
+    fields = ["summary", "description", "status", "priority", "assignee"]
     success_url = reverse_lazy("list")
