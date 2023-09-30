@@ -7,9 +7,18 @@
 <main id="issue-list-page">
     <div class="container flex-col">
         <h1>Issues</h1>
-        <button class="create-issue button" onclick="window.location.href = '{% url 'new' %}'">Post an Issue<span><i class="fa-solid fa-plus"></i></span></button>
-        <section class="flex-row justify">
+            <div id="issue-control" class="flex-row flex-between align">
+                <div class="flex-row filter-set align">
+                    <h3>Filters: </h3>
+                    <button id="to-do-btn" class="button active-filter">To-Do<span><i class="fa-solid fa-folder-open"></i></span></button>
+                    <button id="in-progress-btn" class="button">In-Progress<span><i class="fa-solid fa-spinner"></i></span></button>
+                    <button id="done-btn" class="button">Done<span><i class="fa-solid fa-check"></i></span></button>
+                </div>
+                <button class="create-issue button" onclick="window.location.href = '{% url 'new' %}'">Post an Issue<span><i class="fa-solid fa-plus"></i></span></button>
+            </div>
+        <section id="issue-todo" class="flex-row justify">
             {% for issue in issue_list %}
+                {% if issue.status_id == 1 %}
                 <article class="issue-item flex-row">
                     {% if issue.priority_id == 1 %}
                     <div class="issue-priority red align">
@@ -45,9 +54,94 @@
                         </div>
                     </div>
                 </article>
+                {% endif %}
+            {% endfor %}
+        </section>
+        <section id="issue-inprogress" class="flex-row justify hidden">
+            {% for issue in issue_list %}
+                {% if issue.status_id == 2 %}
+                <article class="issue-item flex-row">
+                    {% if issue.priority_id == 1 %}
+                    <div class="issue-priority red align">
+                        <h2 class="priority-value">{{ issue.priority }}</h2>
+                    </div>
+                    {% elif issue.priority_id == 2 %}
+                    <div class="issue-priority yellow align">
+                        <h2 class="priority-value">{{ issue.priority }}</h2>
+                    </div>
+                    {% else %}
+                    <div class="issue-priority green align">
+                        <h2 class="priority-value">{{ issue.priority }}</h2>
+                    </div>
+                    {% endif %}
+                    <div class="issue-body flex-col flex-between"> 
+
+                        <div class="issue-created-container flex-row align flex-between">
+                            <h3 class="issue-status">Status: <span>{{ issue.status }}</span></h3>
+                            <div class="flex-col justify">
+                                <p class="created-by">Created by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} <br>{{ issue.formatted_created_on }} </p>
+                            </div>
+                        </div>
+
+                        <h2 class="issue-assignee">Assignee: 
+                        <span>{{ issue.assignee.first_name }} {{ issue.assignee.last_name }}</span>
+                        </h2>
+
+                        <h2 class="issue-summary"><span>Issue</span>: {{ issue.summary|truncatechars:"64" }}</h2>
+                        <div class="button-set flex-row align">
+                            <button class="button" onclick="window.location.href = '{% url 'detail' issue.id %}'">View <span><i class="fa-solid fa-eye"></i></span></button>
+                            <button class="button" onclick="window.location.href = '{% url 'update' issue.id %}'">Edit<span><i class="fa-solid fa-pencil"></i></span></button>
+                            <button class="button" onclick="window.location.href = '{% url 'delete' issue.id %}'">Delete<span><i class="fa-solid fa-x"></i></span></button>
+                        </div>
+                    </div>
+                </article>
+                {% endif %}
+            {% endfor %}
+        </section>
+        <section id="issue-done" class="flex-row justify hidden">
+            {% for issue in issue_list %}
+                {% if issue.status_id == 3 %}
+                <article class="issue-item flex-row">
+                    {% if issue.priority_id == 1 %}
+                    <div class="issue-priority red align">
+                        <h2 class="priority-value">{{ issue.priority }}</h2>
+                    </div>
+                    {% elif issue.priority_id == 2 %}
+                    <div class="issue-priority yellow align">
+                        <h2 class="priority-value">{{ issue.priority }}</h2>
+                    </div>
+                    {% else %}
+                    <div class="issue-priority green align">
+                        <h2 class="priority-value">{{ issue.priority }}</h2>
+                    </div>
+                    {% endif %}
+                    <div class="issue-body flex-col flex-between"> 
+
+                        <div class="issue-created-container flex-row align flex-between">
+                            <h3 class="issue-status">Status: <span>{{ issue.status }}</span></h3>
+                            <div class="flex-col justify">
+                                <p class="created-by">Created by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} <br>{{ issue.formatted_created_on }} </p>
+                            </div>
+                        </div>
+
+                        <h2 class="issue-assignee">Assignee: 
+                        <span>{{ issue.assignee.first_name }} {{ issue.assignee.last_name }}</span>
+                        </h2>
+
+                        <h2 class="issue-summary"><span>Issue</span>: {{ issue.summary|truncatechars:"64" }}</h2>
+                        <div class="button-set flex-row align">
+                            <button class="button" onclick="window.location.href = '{% url 'detail' issue.id %}'">View <span><i class="fa-solid fa-eye"></i></span></button>
+                            <button class="button" onclick="window.location.href = '{% url 'update' issue.id %}'">Edit<span><i class="fa-solid fa-pencil"></i></span></button>
+                            <button class="button" onclick="window.location.href = '{% url 'delete' issue.id %}'">Delete<span><i class="fa-solid fa-x"></i></span></button>
+                        </div>
+                    </div>
+                </article>
+                {% endif %}
             {% endfor %}
         </section>
     </div>
 </main>
+
+<script src="/static/js/issue-list.js"></script>
 
 {% endblock content %}

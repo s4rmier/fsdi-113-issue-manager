@@ -34,6 +34,12 @@
 * .flex-between {
   justify-content: space-between;
 }
+* .active-filter {
+  background-color: #EAC435;
+}
+* .active-filter span {
+  background-color: #FCF7FF;
+}
 * nav li {
   font-family: "Poppins";
   margin-right: 2rem;
@@ -149,11 +155,22 @@
     margin: 2rem 0rem 1rem;
     font-size: 2rem;
   }
-  main#issue-list-page div.container button.create-issue {
+  main#issue-list-page div.container div#issue-control {
+    margin-bottom: 1rem;
+  }
+  main#issue-list-page div.container div#issue-control div h3 {
+    font-family: "Bebas Neue";
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+  }
+  main#issue-list-page div.container div#issue-control div button.button {
+    margin: 0rem 0.25rem;
+  }
+  main#issue-list-page div.container div#issue-control button.create-issue {
     align-self: flex-end;
     margin: 0rem 0rem 2rem;
   }
-  main#issue-list-page div.container button.create-issue span {
+  main#issue-list-page div.container div#issue-control button.create-issue span {
     background-color: #4DA167;
   }
   main#issue-list-page div.container section {
