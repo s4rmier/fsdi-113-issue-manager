@@ -173,67 +173,70 @@
   main#issue-list-page div.container div#issue-control button.create-issue span {
     background-color: #4DA167;
   }
-  main#issue-list-page div.container section {
-    flex-wrap: wrap;
-    flex-basis: 2;
+  main#issue-list-page div.container section div.todo-list h2, main#issue-list-page div.container section div.inprogress-list h2, main#issue-list-page div.container section div.done-list h2 {
+    font-family: "Bebas Neue";
+    margin-bottom: 1rem;
   }
-  main#issue-list-page div.container section article {
+  main#issue-list-page div.container section div.todo-list article, main#issue-list-page div.container section div.inprogress-list article, main#issue-list-page div.container section div.done-list article {
+    cursor: pointer;
     background-color: #FCF7FF;
     border-bottom: 1px solid #313628;
     border-right: 1px solid #313628;
-    width: 36rem;
-    margin: 0rem 2rem 2rem 0rem;
+    width: 26rem;
+    margin: 0rem 1rem 1rem 0rem;
   }
-  main#issue-list-page div.container section article div.issue-priority {
+  main#issue-list-page div.container section div.todo-list article div.issue-priority, main#issue-list-page div.container section div.inprogress-list article div.issue-priority, main#issue-list-page div.container section div.done-list article div.issue-priority {
     align-self: flex-start;
     margin-left: 1rem;
     height: 80%;
   }
-  main#issue-list-page div.container section article div.issue-priority h2 {
-    font-size: 1rem;
+  main#issue-list-page div.container section div.todo-list article div.issue-priority h2, main#issue-list-page div.container section div.inprogress-list article div.issue-priority h2, main#issue-list-page div.container section div.done-list article div.issue-priority h2 {
+    font-size: 0.75rem;
     text-transform: uppercase;
     font-family: "Poppins";
     font-weight: 400;
     writing-mode: vertical-lr;
     padding: 1rem 0.25rem 0rem;
   }
-  main#issue-list-page div.container section article .red {
+  main#issue-list-page div.container section div.todo-list article .red, main#issue-list-page div.container section div.inprogress-list article .red, main#issue-list-page div.container section div.done-list article .red {
     background-color: #CE4257;
   }
-  main#issue-list-page div.container section article .yellow {
+  main#issue-list-page div.container section div.todo-list article .yellow, main#issue-list-page div.container section div.inprogress-list article .yellow, main#issue-list-page div.container section div.done-list article .yellow {
     background-color: #EAC435;
   }
-  main#issue-list-page div.container section article .green {
+  main#issue-list-page div.container section div.todo-list article .green, main#issue-list-page div.container section div.inprogress-list article .green, main#issue-list-page div.container section div.done-list article .green {
     background-color: #4DA167;
   }
-  main#issue-list-page div.container section article div.issue-body {
+  main#issue-list-page div.container section div.todo-list article div.issue-body, main#issue-list-page div.container section div.inprogress-list article div.issue-body, main#issue-list-page div.container section div.done-list article div.issue-body {
     padding: 1rem;
     width: 100%;
   }
-  main#issue-list-page div.container section article div.issue-body .issue-summary {
+  main#issue-list-page div.container section div.todo-list article div.issue-body .issue-summary, main#issue-list-page div.container section div.inprogress-list article div.issue-body .issue-summary, main#issue-list-page div.container section div.done-list article div.issue-body .issue-summary {
     margin: 1rem 0rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
   }
-  main#issue-list-page div.container section article div.issue-body .issue-summary span {
-    font-family: "Poppins";
+  main#issue-list-page div.container section div.todo-list article div.issue-body .issue-summary span, main#issue-list-page div.container section div.inprogress-list article div.issue-body .issue-summary span, main#issue-list-page div.container section div.done-list article div.issue-body .issue-summary span {
     font-weight: 600;
     text-transform: uppercase;
   }
-  main#issue-list-page div.container section article div.issue-body h2.issue-assignee {
+  main#issue-list-page div.container section div.todo-list article div.issue-body h2.issue-assignee, main#issue-list-page div.container section div.inprogress-list article div.issue-body h2.issue-assignee, main#issue-list-page div.container section div.done-list article div.issue-body h2.issue-assignee {
     margin: 0.5rem 0rem;
   }
-  main#issue-list-page div.container section article div.issue-body div.button-set {
+  main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set {
     align-self: flex-end;
     margin: 2rem 0rem 0.5rem;
   }
-  main#issue-list-page div.container section article div.issue-body div.button-set button.button {
+  main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set button.button, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set button.button, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set button.button {
     margin: 0rem 0.5rem;
   }
-  main#issue-list-page div.container section article div.issue-body div.button-set button.button:nth-child(2) span {
+  main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set button.button:nth-child(2) span, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set button.button:nth-child(2) span, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set button.button:nth-child(2) span {
     background-color: #EAC435;
   }
-  main#issue-list-page div.container section article div.issue-body div.button-set button.button:nth-child(3) span {
+  main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set button.button:nth-child(3) span, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set button.button:nth-child(3) span, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set button.button:nth-child(3) span {
     background-color: #CE4257;
+  }
+  main#issue-list-page div.container section div.todo-list article:hover, main#issue-list-page div.container section div.inprogress-list article:hover, main#issue-list-page div.container section div.done-list article:hover {
+    scale: 1.05;
   }
 }/*# sourceMappingURL=base.css.map */

@@ -6,33 +6,42 @@ let toDoButton = document.getElementById('to-do-btn');
 let inProgressButton = document.getElementById('in-progress-btn');
 let doneButton = document.getElementById('done-btn');
 
-function toggleListVisibility(list, button, listClass, buttonClass) {
-    list.classList.remove('hidden');
-    button.classList.add('active-filter');
+let toggleVisibility = (list, button) => {
 
-    // Hide other lists and buttons
-    [todoList, inProgressList, doneList].forEach((listItem) => {
-        if (listItem !== list) {
-            listItem.classList.add('hidden');
-        }
-    });
+    function toggleListsState(listClass) {
+        listClass.classList.remove('hidden')
+        let listArray = [todoList, inProgressList, doneList]
 
-    // Remove active-filter class from other buttons
-    [toDoButton, inProgressButton, doneButton].forEach((btn) => {
-        if (btn !== button) {
-            btn.classList.remove('active-filter');
-        }
-    });
+        listArray.forEach(list => {
+            if (list != listClass) {
+                list.classList.add('hidden')
+            }
+        });
+    }
+
+    function toggleFilterState(buttonClass) {
+        buttonClass.classList.add('active-filter')
+        let buttonsArray = [toDoButton, inProgressButton, doneButton]
+
+        buttonsArray.forEach(button => {
+            if (button != buttonClass) {
+                button.classList.remove('active-filter')
+            }
+        });
+    }
+
+    toggleListsState(list);
+    toggleFilterState(button);
 }
 
 toDoButton.addEventListener("click", () => {
-    toggleListVisibility(todoList, toDoButton, inProgressList, doneList, inProgressButton, doneButton);
-});
+    toggleVisibility(todoList, toDoButton)
+})
 
 inProgressButton.addEventListener("click", () => {
-    toggleListVisibility(inProgressList, inProgressButton, todoList, doneList, toDoButton, doneButton);
-});
+    toggleVisibility(inProgressList, inProgressButton)
+})
 
 doneButton.addEventListener("click", () => {
-    toggleListVisibility(doneList, doneButton, inProgressList, todoList, inProgressButton, toDoButton);
-});
+    toggleVisibility(doneList, doneButton)
+})
