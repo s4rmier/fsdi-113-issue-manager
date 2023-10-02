@@ -48,7 +48,7 @@
             <div class="inprogress-list flex-col">
                 <h2>In-Progress: </h2>
                 {% for issue in issue_list %}
-                    {% if issue.status_id == 2 %}
+                    {% if issue.status_id == 2 and issue.reporter.team == user.team %}
                     <article class="issue-item flex-row" onclick="window.location.href = '{% url 'detail' issue.id %}'">
                         {% if issue.priority_id == 1 %}
                         <div class="issue-priority red align">
@@ -82,7 +82,7 @@
             <div class="done-list flex-col">
                 <h2>Done :</h2>
                 {% for issue in issue_list %}
-                    {% if issue.status_id == 3 %}
+                    {% if issue.status_id == 3 and issue.reporter.team == user.team %}
                     <article class="issue-item flex-row" onclick="window.location.href = '{% url 'detail' issue.id %}'">
                         {% if issue.priority_id == 1 %}
                         <div class="issue-priority red align">

@@ -7,12 +7,17 @@
 <main id="detail-issue-page">
     <div class="container">
         <h1>{{ issue.summary }}</h1>
-        <h2>Status: {{ issue.status }}</h2>
-        <h3>Priority: {{ issue.priority }}</h3>
-        <h3>Reported by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} | {{ issue.created_on }}</h3>
-        <p>
+        <h2 class="detail-status">Status: {{ issue.status }}</h2>
+        <h3 class="detail-priority">Priority: {{ issue.priority }}</h3>
+        <h3 class="detail-reporter">Reported by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} | {{ issue.formatted_created_on }}</h3>
+        <p class="detail-description">
             {{ issue.description }}
         </p>
+
+        <div class="button-set flex-row align">
+            <button class="button" onclick="window.location.href = '{% url 'update' issue.id %}'">Edit<span><i class="fa-solid fa-pencil"></i></span></button>
+            <button class="button" onclick="window.location.href = '{% url 'delete' issue.id %}'">Delete<span><i class="fa-solid fa-x"></i></span></button>
+        </div>
     </div>
 </main>
 

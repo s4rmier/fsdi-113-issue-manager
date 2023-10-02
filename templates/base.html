@@ -24,7 +24,10 @@
             </div>
             <div class="user-panel flex-row align">
                 {% if user.is_authenticated %}
-                <h3>Welcome, &nbsp<span>{{ user.first_name }}</span></h2>
+                <div class="flex-col-align">
+                    <h3>Welcome, &nbsp<span>{{ user.first_name }}</span></h2>
+                    <p onclick="window.location.href = '{% url 'logout' %}'">Log Out</p>
+                </div>
                 <img src="/static/img/profile.jpg" alt="">
                 {% else %}
                 <ul class="flex-row align">

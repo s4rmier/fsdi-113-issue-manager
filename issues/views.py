@@ -7,13 +7,26 @@ from django.views.generic import (
 )
 from django.urls import reverse_lazy
 from .models import Issue
+from django.contrib.auth.mixins import (
+    LoginRequiredMixin
+)
 
 
-class IssueCreateView(CreateView):
+class IssueCreateView(LoginRequiredMixin, CreateView):
     template_name = "issues/create-issue.html"
     model = Issue
-    fields = ["summary", "description", "reporter",
-              "assignee", "status", "priority"]
+    fields = ["summary", "description", "assignee", "status", "priority"]
+
+    def form_valid(self, form):
+        form.instance.reporter = self.request.user
+        return super().form_valid(form)
+
+
+class IssueUpdateView(UpdateView):
+    template_name = "issues/update-issue.html"
+    model = Issue
+    fields = ["summary", "description", "status", "priority", "assignee"]
+    success_url = reverse_lazy("list")
 
 
 class IssueDeleteView(DeleteView):
@@ -30,10 +43,3 @@ class IssueDetailView(DetailView):
 class IssueListView(ListView):
     template_name = "issues/issue-list.html"
     model = Issue
-
-
-class IssueUpdateView(UpdateView):
-    template_name = "issues/update-issue.html"
-    model = Issue
-    fields = ["summary", "description", "status", "priority", "assignee"]
-    success_url = reverse_lazy("list")
