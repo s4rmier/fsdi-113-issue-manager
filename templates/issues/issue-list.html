@@ -124,7 +124,7 @@
         {% else %}
         <div class="not-authenticated">
             <h2>Please log in to view issues</h2>
-            <button class="button" onclick="window.location.href = '{% url 'login' %}'">Log-In<span>i</span></button>
+            <button class="button" onclick="window.location.href = '{% url 'login' %}'">Log-In<span><i class="fa-solid fa-triangle-exclamation"></i></span></button>
         </div>
         {% endif %}
     </div>

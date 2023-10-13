@@ -68,6 +68,7 @@
   border-bottom: 1px solid #313628;
   border-right: 1px solid #313628;
   margin: 1rem 0rem;
+  background-color: #FCF7FF;
   cursor: pointer;
 }
 * button.button span {
@@ -202,6 +203,33 @@
     border-right: 1px solid #313628;
     cursor: pointer;
   }
+  main#home-page {
+    background-image: url(/static/img/hero.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 87.5svh;
+  }
+  main#home-page div {
+    text-align: left;
+    width: 55%;
+    padding: 20vh 6rem;
+  }
+  main#home-page div h1 {
+    font-size: 2rem;
+  }
+  main#home-page div h2 {
+    font-size: 1rem;
+    font-family: "Poppins";
+    font-weight: 400;
+  }
+  main#issue-list-page {
+    background-image: url(/static/img/issue-bg.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 91svh;
+    padding-bottom: 2rem;
+  }
   main#issue-list-page div.container h1 {
     margin: 2rem 0rem 1rem;
     font-size: 2rem;
@@ -306,7 +334,11 @@
   main#issue-list-page div.container .not-authenticated h2 {
     font-family: "Bebas Neue";
   }
+  main#issue-list-page div.container .not-authenticated button.button span {
+    background-color: #EAC435;
+  }
   main#detail-issue-page div.container {
+    width: 75%;
     margin-top: 2rem;
   }
   main#detail-issue-page div.container div.detail-head p {
@@ -341,14 +373,20 @@
   main#detail-issue-page div.container div.button-set button:nth-child(2) span {
     background-color: #CE4257;
   }
-  main#logout-page div.container h1, main#login-page div.container h1, main#delete-issue-page div.container h1 {
+  main#logout-page div.container h1, main#login-page div.container h1, main#delete-issue-page div.container h1, main#update-issue-page div.container h1 {
     font-family: "Bebas Neue";
   }
-  main#logout-page div.container p, main#login-page div.container p, main#delete-issue-page div.container p {
-    font-family: "Merriweather";
+  main#logout-page div.container p, main#login-page div.container p, main#delete-issue-page div.container p, main#update-issue-page div.container p {
+    font-family: "Bebas Neue";
     font-size: 1rem;
   }
-  main#logout-page div.container button.button, main#login-page div.container button.button, main#delete-issue-page div.container button.button {
+  main#logout-page div.container input[type=submit], main#login-page div.container input[type=submit], main#delete-issue-page div.container input[type=submit], main#update-issue-page div.container input[type=submit] {
+    background-color: #FCF7FF;
+  }
+  main#logout-page div.container button.button, main#login-page div.container button.button, main#delete-issue-page div.container button.button, main#update-issue-page div.container button.button {
     margin: 1rem 0rem;
+  }
+  main#logout-page div.container button.button span, main#login-page div.container button.button span, main#delete-issue-page div.container button.button span, main#update-issue-page div.container button.button span {
+    background-color: #EAC435;
   }
 }/*# sourceMappingURL=base.css.map */
