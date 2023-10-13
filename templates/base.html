@@ -14,9 +14,9 @@
     <nav>
         <div class="container flex-row align">
             <ul class="nav-links flex-row align">
-                <li onclick="window.location.href = '{% url 'home' %}'">Home</li>
-                <li onclick="window.location.href = '{% url 'about' %}'">About</li>
-                <li onclick="window.location.href = '{% url 'list' %}'">Issues</li>
+                <li id="nav-home" onclick="window.location.href = '{% url 'home' %}'">Home</li>
+                <li id="nav-about" onclick="window.location.href = '{% url 'about' %}'">About</li>
+                <li id="nav-issues" onclick="window.location.href = '{% url 'list' %}'">Issues</li>
             </ul>
             <div class="brand-container flex-row align" onclick="window.location.href = '{% url 'home' %}'">
                 <img src="/static/img/logo.svg" alt="">

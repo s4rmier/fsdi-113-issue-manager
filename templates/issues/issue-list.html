@@ -7,14 +7,15 @@
 <main id="issue-list-page">
     <div class="container flex-col">
         <h1>Issues</h1>
+        {% if user.is_authenticated %}
         <div id="issue-control" class="flex-row align">
             <button class="create-issue button" onclick="window.location.href = '{% url 'new' %}'">Post an Issue<span><i class="fa-solid fa-plus"></i></span></button>
         </div>
         <section class="flex-row justify">
-            <div class="todo-list flex-col ">
+            <div class="todo-list flex-col">
                 <h2>To-Do: </h2>
                 {% for issue in issue_list %}
-                    {% if issue.status_id == 1 %}
+                {% if issue.status_id == 1 and issue.reporter.team == user.team %}
                     <article class="issue-item flex-row" onclick="window.location.href = '{% url 'detail' issue.id %}'">
                         {% if issue.priority_id == 1 %}
                         <div class="issue-priority red align">
@@ -29,17 +30,19 @@
                             <h2 class="priority-value">{{ issue.priority }}</h2>
                         </div>
                         {% endif %}
-                        <div class="issue-body flex-col flex-between">
+                        <div class="issue-body flex-col">
                             <div class="issue-created-container flex-row align flex-between">
-                                <h3 class="issue-status">Status: <span>{{ issue.status }}</span></h3>
-                                <div class="flex-col justify">
-                                    <p class="created-by">Created by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} <br>{{ issue.formatted_created_on }} </p>
+                                <div class="flex-col">
+                                    <h3 class="issue-status">Status: <span>{{ issue.status }}</span></h3>
+                                    <h2 class="issue-assignee">Assignee:
+                                        <span>{{ issue.assignee.first_name }} {{ issue.assignee.last_name }}</span>
+                                    </h2>   
                                 </div>
                             </div>
-                            <h2 class="issue-assignee">Assignee:
-                                <span>{{ issue.assignee.first_name }} {{ issue.assignee.last_name }}</span>
-                            </h2>
                             <h2 class="issue-summary"><span>Issue</span>: {{ issue.summary|truncatechars:"64" }}</h2>
+                            <div class="flex-col justify">
+                                <p class="created-by">Created by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} <br>{{ issue.formatted_created_on }} </p>
+                            </div>
                         </div>
                     </article>
                     {% endif %}
@@ -63,17 +66,19 @@
                             <h2 class="priority-value">{{ issue.priority }}</h2>
                         </div>
                         {% endif %}
-                        <div class="issue-body flex-col flex-between">
+                        <div class="issue-body flex-col">
                             <div class="issue-created-container flex-row align flex-between">
-                                <h3 class="issue-status">Status: <span>{{ issue.status }}</span></h3>
-                                <div class="flex-col justify">
-                                    <p class="created-by">Created by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} <br>{{ issue.formatted_created_on }} </p>
+                                <div class="flex-col">
+                                    <h3 class="issue-status">Status: <span>{{ issue.status }}</span></h3>
+                                    <h2 class="issue-assignee">Assignee:
+                                        <span>{{ issue.assignee.first_name }} {{ issue.assignee.last_name }}</span>
+                                    </h2>   
                                 </div>
                             </div>
-                            <h2 class="issue-assignee">Assignee:
-                                <span>{{ issue.assignee.first_name }} {{ issue.assignee.last_name }}</span>
-                            </h2>
                             <h2 class="issue-summary"><span>Issue</span>: {{ issue.summary|truncatechars:"64" }}</h2>
+                            <div class="flex-col justify">
+                                <p class="created-by">Created by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} <br>{{ issue.formatted_created_on }} </p>
+                            </div>
                         </div>
                     </article>
                     {% endif %}
@@ -97,25 +102,41 @@
                             <h2 class="priority-value">{{ issue.priority }}</h2>
                         </div>
                         {% endif %}
-                        <div class="issue-body flex-col flex-between">
+                        <div class="issue-body flex-col">
                             <div class="issue-created-container flex-row align flex-between">
-                                <h3 class="issue-status">Status: <span>{{ issue.status }}</span></h3>
-                                <div class="flex-col justify">
-                                    <p class="created-by">Created by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} <br>{{ issue.formatted_created_on }} </p>
+                                <div class="flex-col">
+                                    <h3 class="issue-status">Status: <span>{{ issue.status }}</span></h3>
+                                    <h2 class="issue-assignee">Assignee:
+                                        <span>{{ issue.assignee.first_name }} {{ issue.assignee.last_name }}</span>
+                                    </h2>   
                                 </div>
                             </div>
-                            <h2 class="issue-assignee">Assignee:
-                                <span>{{ issue.assignee.first_name }} {{ issue.assignee.last_name }}</span>
-                            </h2>
                             <h2 class="issue-summary"><span>Issue</span>: {{ issue.summary|truncatechars:"64" }}</h2>
+                            <div class="flex-col justify">
+                                <p class="created-by">Created by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} <br>{{ issue.formatted_created_on }} </p>
+                            </div>
                         </div>
                     </article>
                     {% endif %}
                 {% endfor %}
             </div>
         </section>
+        {% else %}
+        <div class="not-authenticated">
+            <h2>Please log in to view issues</h2>
+            <button class="button" onclick="window.location.href = '{% url 'login' %}'">Log-In<span>i</span></button>
+        </div>
+        {% endif %}
     </div>
 </main>
+
+<script>
+    let listLink = document.getElementById('nav-issues');
+    function assignActiveClass() {
+        listLink.classList.add('active-nav')
+    }
+    window.onload = (assignActiveClass)
+</script>
 <!-- uncomment this code if the developer want's to implement a filtering system instead of columns showing all tasks -->
 <!-- <script src="/static/js/issue-list.js"></script> -->
 {% endblock content %}

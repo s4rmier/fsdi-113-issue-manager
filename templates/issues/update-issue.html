@@ -7,12 +7,20 @@
 <main id="update-issue-page">
     <div class="container">
         <h1>Update Issue</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Submit">
-        </form>
+        <div class="flex-col align justify">
+            <form method="POST" class="universal-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </div>
 </main>
-
+<script>
+    let listLink = document.getElementById('nav-issues');
+    function assignActiveClass() {
+        listLink.classList.add('active-nav')
+    }
+    window.onload = (assignActiveClass)
+</script>
 {% endblock content %}

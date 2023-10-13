@@ -6,4 +6,11 @@
 <main id="home-page">
     <div class="container"></div>
 </main>
+<script>
+    let listLink = document.getElementById('nav-home');
+    function assignActiveClass() {
+        listLink.classList.add('active-nav')
+    }
+    window.onload = (assignActiveClass)
+</script>
 {% endblock content %}

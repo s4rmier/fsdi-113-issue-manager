@@ -5,20 +5,44 @@
 {% block content %}
 
 <main id="detail-issue-page">
-    <div class="container">
-        <h1>{{ issue.summary }}</h1>
-        <h2 class="detail-status">Status: {{ issue.status }}</h2>
-        <h3 class="detail-priority">Priority: {{ issue.priority }}</h3>
-        <h3 class="detail-reporter">Reported by: {{ issue.reporter.first_name }} {{ issue.reporter.last_name }} | {{ issue.formatted_created_on }}</h3>
-        <p class="detail-description">
-            {{ issue.description }}
-        </p>
-
+    <div class="container flex-col">
+        <div class="detail-head flex-row flex-between">
+            <div class="flex-col">
+                <p class="detail-assignee">Assignee: <span>{{ issue.assignee.first_name }} {{ issue.assignee.last_name }}</span></p>
+                <p class="detail-status">Status: <span>{{ issue.status }}</span></p>
+            </div>
+            <div class="flex-col">
+                <p class="issued-by">Reporter: <span>{{ issue.reporter.first_name }} {{ issue.reporter.last_name }}</span></p>
+                <p>Posted on: <span>{{ issue.formatted_created_on }}</span></p>
+            </div>
+        </div>
+        <div class="detail-body flex-col">
+            <h2 class="detail-summary">Title: <span>{{ issue.summary }}</span></h2>
+            <p class="detail-description {{ issue.priority_id }}">{{ issue.description }}</p>
+        </div>
         <div class="button-set flex-row align">
             <button class="button" onclick="window.location.href = '{% url 'update' issue.id %}'">Edit<span><i class="fa-solid fa-pencil"></i></span></button>
             <button class="button" onclick="window.location.href = '{% url 'delete' issue.id %}'">Delete<span><i class="fa-solid fa-x"></i></span></button>
         </div>
     </div>
 </main>
+
+<script>
+    let listLink = document.getElementById('nav-issues');
+    function assignActiveClass() {
+        listLink.classList.add('active-nav')
+    }
+
+    let detailDesc = document.querySelector('.detail-description');
+    function assignPriorityLevel() {
+        detailDesc.classList.contains("1") ? detailDesc.style.borderLeft = '4px solid #CE4257' : detailDesc.classList.contains("2") ? detailDesc.style.borderLeft = '4px solid #EAC435' : 
+        detailDesc.style.borderLeft = '4px solid #4DA167'
+    }
+ 
+    window.onload = () => {
+        assignActiveClass();
+        assignPriorityLevel();
+    }
+</script>
 
 {% endblock content %}

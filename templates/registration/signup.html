@@ -6,11 +6,13 @@
 <main id="sign-up-page">
     <div class="container">
         <h1>Sign Up</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Register">
-        </form>
+        <div class="flex-col align justify">
+            <form method="POST" class="universal-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Register">
+            </form>
+        </div>
     </div>
 </main>
 {% endblock content %}

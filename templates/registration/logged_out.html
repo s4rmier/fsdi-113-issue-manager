@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Paradocs | Logged Out {% endblock title %}
+
+{% block content %}
+<main id="logout-page">
+    <div class="container">
+        <h1>Logged Out</h1>
+        <p>You have successfully logged out</p>
+        <button class="button" onclick="window.location.href = '{% url 'login' %}'">Log In<span>i</span></button>
+    </div>
+</main>
+
+{% endblock content %}
