@@ -11,7 +11,7 @@
 }
 * .container {
   width: 90%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 * .flex-col {
@@ -69,6 +69,9 @@
   border-right: 1px solid #313628;
   margin: 1rem 0rem;
   background-color: #FCF7FF;
+  width: -moz-min-content;
+  width: min-content;
+  text-wrap: nowrap;
   cursor: pointer;
 }
 * button.button span {
@@ -86,6 +89,9 @@
   }
   nav div.container {
     justify-content: space-around;
+  }
+  nav div.container div.brand-container {
+    margin-right: 2.25rem;
   }
   nav div.container div.brand-container img {
     margin-right: 0.5rem;
@@ -209,25 +215,70 @@
     background-size: cover;
     background-position: center;
     min-height: 87.5svh;
+    width: 100vw;
   }
-  main#home-page div {
+  main#home-page div section.hero-section {
     text-align: left;
-    width: 55%;
-    padding: 20vh 6rem;
+    width: 40%;
+    padding: 10% 1rem;
   }
-  main#home-page div h1 {
+  main#home-page div section.hero-section h1 {
     font-size: 2rem;
   }
-  main#home-page div h2 {
+  main#home-page div section.hero-section h2 {
     font-size: 1rem;
-    font-family: "Poppins";
+    font-family: "Merriweather";
     font-weight: 400;
   }
-  main#issue-list-page {
+  main#home-page div button.button span {
+    background-color: #4DA167;
+  }
+  main#about-page {
     background-image: url(/static/img/issue-bg.svg);
-    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 91svh;
+    background-size: cover;
+  }
+  main#about-page div {
+    background-image: url(/static/img/arrow-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 2rem;
+  }
+  main#about-page div h1 {
+    text-align: center;
+  }
+  main#about-page div figure {
+    margin: 0rem 2rem;
+    width: 70%;
+  }
+  main#about-page div figure img {
+    width: 300px;
+  }
+  main#about-page div figure figcaption {
+    padding: 0rem 2rem;
+  }
+  main#about-page div figure figcaption h2 {
+    font-family: "Bebas Neue";
+    margin: 1rem 0rem;
+  }
+  main#about-page div figure figcaption p {
+    font-family: "Merriweather";
+  }
+  main#about-page div figure:nth-child(2) {
+    align-self: flex-end;
+  }
+  main#about-page div button.button {
+    align-self: center;
+    width: -moz-min-content;
+    width: min-content;
+    text-wrap: nowrap;
+  }
+  main#about-page div button.button span {
+    background-color: #4DA167;
+  }
+  main#issue-list-page {
     padding-bottom: 2rem;
   }
   main#issue-list-page div.container h1 {

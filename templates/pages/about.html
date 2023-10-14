@@ -4,7 +4,33 @@
 
 {% block content %}
 <main id="about-page">
-    <div class="container"></div>
+    <div class="container flex-col justify">
+        <h1>What is Paradocs?</h1>
+        <section class="flex-col">
+            <figure class="flex-row">
+                <img src="/static/img/issue-simplified.svg" alt="">
+                <figcaption class="flex-col justify">
+                    <h2>1. Issue Management Simplified: </h2>
+                    <p>Paradocs is your all-in-one solution to effortlessly tackle problems, leaving complexity in the dust. Say goodbye to chaos and hello to seamless resolution.</p>
+                </figcaption>
+            </figure>
+            <figure class="flex-row">
+                <figcaption class="flex-col justify">
+                    <h2>2. Collaborative: </h2>
+                    <p>We believe in the power of teamwork. Paradocs enables easy collaboration and real-time updates, ensuring everyone is on the same page and issues are resolved faster than ever.</p>
+                </figcaption>
+                <img src="/static/img/issue-collaborate.svg" alt="">
+            </figure>
+            <figure class="flex-row">
+                <img src="/static/img/issue-cloud.svg" alt="">
+                <figcaption class="flex-col justify">
+                    <h2>3. Cloud-Powered Efficiency</h2>
+                    <p>With Paradocs, harness the convenience and flexibility of cloud-based issue management, ensuring your data is accessible and secure from anywhere, anytime.</p>
+                </figcaption>
+            </figure>
+        </section>
+        <button class="button">Subscribe<span><i class="fa-solid fa-arrow-right-to-bracket"></i></span></button>
+    </div>
 </main>
 <script>
     let listLink = document.getElementById('nav-about');

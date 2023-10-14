@@ -4,9 +4,12 @@
 
 {% block content %}
 <main id="home-page">
-    <div class="flex-col">
-        <h1>Paradocs: Navigating the Paradox of Issue Management with a Twist! Where Problems Meet Solutions in a Web App that Defies Convention.</h1>
-        <h2>Supercharge your issue management skills with Paradocs, where problems become paradoxically solved and fun meets functionality!</h2>
+    <div class="container flex-col">
+        <section class="flex-col hero-section">
+            <h1>Paradocs: Navigating the Paradox of Issue Management with a Twist! Where Problems Meet Solutions in a Web App that Defies Convention.</h1>
+            <h2>Supercharge your issue management skills with Paradocs where problems become paradoxically solved and fun meets functionality!</h2>
+            <button class="button" onclick="window.location.href = '{% url 'about' %}'">Learn More<span><i class="fa-solid fa-arrow-right-to-bracket"></i></span></button>
+        </section>
     </div>
 </main>
 <script>
