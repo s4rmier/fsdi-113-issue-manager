@@ -123,8 +123,9 @@
         </section>
         {% else %}
         <div class="not-authenticated">
-            <h2>Please log in to view issues</h2>
-            <button class="button" onclick="window.location.href = '{% url 'login' %}'">Log-In<span><i class="fa-solid fa-triangle-exclamation"></i></span></button>
+            <p>Please log in to view issues</p>
+            <button class="button" value="signup" onclick="window.location.href = '{% url 'signup' %}'">Sign-Up<span><i class="fa-solid fa-arrow-right-to-bracket"></i></span></button>
+            <button class="button" onclick="window.location.href = '{% url 'login' %}'">Log-In<span><i class="fa-solid fa-arrow-right-to-bracket"></i></span></button>
         </div>
         {% endif %}
     </div>

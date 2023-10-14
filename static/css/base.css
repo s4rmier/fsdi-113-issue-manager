@@ -80,364 +80,372 @@
   background-color: #FCF7FF;
 }
 
-@media screen and (min-width: 1024px) {
-  body {
-    background-color: #EEF0F2;
-  }
-  nav {
-    padding: 1rem 0.75rem;
-  }
-  nav div.container {
-    justify-content: space-around;
-  }
-  nav div.container div.brand-container {
-    margin-right: 2.25rem;
-  }
-  nav div.container div.brand-container img {
-    margin-right: 0.5rem;
-    height: 30px;
-    cursor: pointer;
-  }
-  nav div.container div.brand-container h2 {
-    cursor: pointer;
-    font-size: 1.75rem;
-    font-family: "Bebas Neue";
-  }
-  nav div.container div.user-panel div h3 {
-    text-transform: uppercase;
-    font-family: "Lato";
-    font-size: 0.85rem;
-    font-weight: 500;
-  }
-  nav div.container div.user-panel div h3 span {
-    color: #2f1465;
-    font-family: "Poppins";
-    font-weight: 600;
-  }
-  nav div.container div.user-panel div p {
-    font-family: "Lato";
-    text-transform: uppercase;
-    font-size: 0.5rem;
-    opacity: 65%;
-    text-decoration: underline;
-    text-align: right;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  nav div.container div.user-panel img {
-    height: 30px;
-    margin-left: 0.5rem;
-    border-radius: 50%;
-    border: 3px solid #2f1465;
-  }
-  main h1 {
-    margin: 2rem 0rem 1rem;
-    font-size: 2rem;
-  }
-  main hr {
-    margin-bottom: 1rem;
-  }
-  main .issue-status, main .issue-assignee {
-    text-wrap: nowrap;
-    font-family: "Bebas Neue";
-    font-size: 1rem;
-  }
-  main .issue-status span, main .issue-assignee span {
-    background-color: #EEF0F2;
-    padding: 6px 10px;
-  }
-  main .issue-created {
-    font-family: "Montserrat";
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    opacity: 0.25;
-  }
-  main .issue-summary {
-    font-family: "Poppins";
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-  main .issue-summary span {
-    font-weight: 600;
-  }
-  main .created-on-date, main .created-by {
-    font-family: "Roboto Condensed";
-    opacity: 50%;
-    text-transform: uppercase;
-    font-size: 0.5rem;
-    text-align: right;
-    margin-left: 1rem;
-  }
-  main .universal-form {
-    margin: 1rem 0rem;
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-  }
-  main .universal-form label {
-    display: block;
-    font-family: "Bebas Neue";
-    margin: 0.25rem 0rem;
-  }
-  main .universal-form input, main .universal-form textarea {
-    width: 100%;
-    padding: 0.15rem 0.25rem;
-    font-family: "Poppins";
-    resize: none;
-    margin-bottom: 1rem;
-  }
-  main .universal-form span, main .universal-form li {
-    font-family: "Poppins";
-  }
-  main .universal-form textarea {
-    height: 10rem;
-  }
-  main .universal-form select {
-    padding: 0.15rem 0.25rem;
-    font-family: "Poppins";
-    margin-bottom: 1rem;
-  }
-  main .universal-form input[type=submit] {
-    margin-top: 1rem;
-    width: -moz-max-content;
-    width: max-content;
-    font-family: "Bebas Neue";
-    border: none;
-    padding: 0.5rem 0.75rem;
-    font-size: 1rem;
-    border-bottom: 1px solid #313628;
-    border-right: 1px solid #313628;
-    cursor: pointer;
-  }
-  main#home-page {
-    background-image: url(/static/img/hero.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 87.5svh;
-    width: 100vw;
-  }
-  main#home-page div section.hero-section {
-    text-align: left;
-    width: 40%;
-    padding: 10% 1rem;
-  }
-  main#home-page div section.hero-section h1 {
-    font-size: 2rem;
-  }
-  main#home-page div section.hero-section h2 {
-    font-size: 1rem;
-    font-family: "Merriweather";
-    font-weight: 400;
-  }
-  main#home-page div button.button span {
-    background-color: #4DA167;
-  }
-  main#about-page {
-    background-image: url(/static/img/issue-bg.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  main#about-page div {
-    background-image: url(/static/img/arrow-bg.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 2rem;
-  }
-  main#about-page div h1 {
-    text-align: center;
-  }
-  main#about-page div figure {
-    margin: 0rem 2rem;
-    width: 70%;
-  }
-  main#about-page div figure img {
-    width: 300px;
-  }
-  main#about-page div figure figcaption {
-    padding: 0rem 2rem;
-  }
-  main#about-page div figure figcaption h2 {
-    font-family: "Bebas Neue";
-    margin: 1rem 0rem;
-  }
-  main#about-page div figure figcaption p {
-    font-family: "Merriweather";
-  }
-  main#about-page div figure:nth-child(2) {
-    align-self: flex-end;
-  }
-  main#about-page div button.button {
-    align-self: center;
-    width: -moz-min-content;
-    width: min-content;
-    text-wrap: nowrap;
-  }
-  main#about-page div button.button span {
-    background-color: #4DA167;
-  }
-  main#issue-list-page {
-    padding-bottom: 2rem;
-  }
-  main#issue-list-page div.container h1 {
-    margin: 2rem 0rem 1rem;
-    font-size: 2rem;
-  }
-  main#issue-list-page div.container div#issue-control {
-    margin-bottom: 1rem;
-  }
-  main#issue-list-page div.container div#issue-control div h3 {
-    font-family: "Bebas Neue";
-    text-transform: uppercase;
-    margin-right: 0.5rem;
-  }
-  main#issue-list-page div.container div#issue-control div button.button {
-    margin: 0rem 0.25rem;
-  }
-  main#issue-list-page div.container div#issue-control button.create-issue {
-    align-self: flex-end;
-    margin: 0rem 0rem 2rem;
-  }
-  main#issue-list-page div.container div#issue-control button.create-issue span {
-    background-color: #4DA167;
-  }
-  main#issue-list-page div.container section div.todo-list, main#issue-list-page div.container section div.inprogress-list, main#issue-list-page div.container section div.done-list {
-    min-width: 20rem;
-  }
-  main#issue-list-page div.container section div.todo-list h2, main#issue-list-page div.container section div.inprogress-list h2, main#issue-list-page div.container section div.done-list h2 {
-    font-family: "Bebas Neue";
-    margin-bottom: 1rem;
-  }
-  main#issue-list-page div.container section div.todo-list article, main#issue-list-page div.container section div.inprogress-list article, main#issue-list-page div.container section div.done-list article {
-    cursor: pointer;
-    background-color: #FCF7FF;
-    border-bottom: 1px solid #313628;
-    border-right: 1px solid #313628;
-    margin: 0rem 0.5rem 0.5rem 0.5rem;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-priority, main#issue-list-page div.container section div.inprogress-list article div.issue-priority, main#issue-list-page div.container section div.done-list article div.issue-priority {
-    align-self: flex-start;
-    margin-left: 1rem;
-    height: 50%;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-priority h2, main#issue-list-page div.container section div.inprogress-list article div.issue-priority h2, main#issue-list-page div.container section div.done-list article div.issue-priority h2 {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    font-family: "Poppins";
-    font-weight: 400;
-    writing-mode: vertical-lr;
-    padding: 1rem 0.25rem 0rem;
-  }
-  main#issue-list-page div.container section div.todo-list article .red, main#issue-list-page div.container section div.inprogress-list article .red, main#issue-list-page div.container section div.done-list article .red {
-    background-color: #CE4257;
-  }
-  main#issue-list-page div.container section div.todo-list article .yellow, main#issue-list-page div.container section div.inprogress-list article .yellow, main#issue-list-page div.container section div.done-list article .yellow {
-    background-color: #EAC435;
-  }
-  main#issue-list-page div.container section div.todo-list article .green, main#issue-list-page div.container section div.inprogress-list article .green, main#issue-list-page div.container section div.done-list article .green {
-    background-color: #4DA167;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-body, main#issue-list-page div.container section div.inprogress-list article div.issue-body, main#issue-list-page div.container section div.done-list article div.issue-body {
-    padding: 1rem;
-    width: 100%;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-body .issue-summary, main#issue-list-page div.container section div.inprogress-list article div.issue-body .issue-summary, main#issue-list-page div.container section div.done-list article div.issue-body .issue-summary {
-    margin: 1.5rem 0rem 1rem;
-    font-size: 1rem;
-    font-weight: 400;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-body .issue-summary span, main#issue-list-page div.container section div.inprogress-list article div.issue-body .issue-summary span, main#issue-list-page div.container section div.done-list article div.issue-body .issue-summary span {
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-body h2.issue-assignee, main#issue-list-page div.container section div.inprogress-list article div.issue-body h2.issue-assignee, main#issue-list-page div.container section div.done-list article div.issue-body h2.issue-assignee {
-    font-family: "Poppins";
-    text-transform: uppercase;
-    font-size: 0.65rem;
-    margin: 0.5rem 0rem;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-body h3.issue-status, main#issue-list-page div.container section div.inprogress-list article div.issue-body h3.issue-status, main#issue-list-page div.container section div.done-list article div.issue-body h3.issue-status {
-    font-family: "Poppins";
-    text-transform: uppercase;
-    font-size: 0.65rem;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set {
-    align-self: flex-end;
-    margin: 2rem 0rem 0.5rem;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set button.button, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set button.button, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set button.button {
-    margin: 0rem 0.5rem;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set button.button:nth-child(2) span, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set button.button:nth-child(2) span, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set button.button:nth-child(2) span {
-    background-color: #EAC435;
-  }
-  main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set button.button:nth-child(3) span, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set button.button:nth-child(3) span, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set button.button:nth-child(3) span {
-    background-color: #CE4257;
-  }
-  main#issue-list-page div.container section div.todo-list article:hover, main#issue-list-page div.container section div.inprogress-list article:hover, main#issue-list-page div.container section div.done-list article:hover {
-    scale: 1.02;
-  }
-  main#issue-list-page div.container div button.button {
-    margin: 1rem 0rem;
-  }
-  main#issue-list-page div.container .not-authenticated h2 {
-    font-family: "Bebas Neue";
-  }
-  main#issue-list-page div.container .not-authenticated button.button span {
-    background-color: #EAC435;
-  }
-  main#detail-issue-page div.container {
-    width: 75%;
-    margin-top: 2rem;
-  }
-  main#detail-issue-page div.container div.detail-head p {
-    font-size: 0.75rem;
-    font-family: "Poppins";
-    text-transform: uppercase;
-  }
-  main#detail-issue-page div.container div.detail-head p span {
-    font-weight: 600;
-  }
-  main#detail-issue-page div.container div.detail-body {
-    margin: 2rem 0rem 1rem;
-  }
-  main#detail-issue-page div.container div.detail-body h2 {
-    font-family: "Bebas Neue";
-  }
-  main#detail-issue-page div.container div.detail-body p.detail-description {
-    font-family: "Merriweather";
-    margin: 1rem 0rem;
-    padding: 0rem 2rem;
-  }
-  main#detail-issue-page div.container div.button-set {
-    justify-content: flex-end;
-    margin-right: 4rem;
-  }
-  main#detail-issue-page div.container div.button-set button {
-    margin: 0rem 0.5rem;
-  }
-  main#detail-issue-page div.container div.button-set button:nth-child(1) span {
-    background-color: #EAC435;
-  }
-  main#detail-issue-page div.container div.button-set button:nth-child(2) span {
-    background-color: #CE4257;
-  }
-  main#logout-page div.container h1, main#login-page div.container h1, main#delete-issue-page div.container h1, main#update-issue-page div.container h1 {
-    font-family: "Bebas Neue";
-  }
-  main#logout-page div.container p, main#login-page div.container p, main#delete-issue-page div.container p, main#update-issue-page div.container p {
-    font-family: "Bebas Neue";
-    font-size: 1rem;
-  }
-  main#logout-page div.container input[type=submit], main#login-page div.container input[type=submit], main#delete-issue-page div.container input[type=submit], main#update-issue-page div.container input[type=submit] {
-    background-color: #FCF7FF;
-  }
-  main#logout-page div.container button.button, main#login-page div.container button.button, main#delete-issue-page div.container button.button, main#update-issue-page div.container button.button {
-    margin: 1rem 0rem;
-  }
-  main#logout-page div.container button.button span, main#login-page div.container button.button span, main#delete-issue-page div.container button.button span, main#update-issue-page div.container button.button span {
-    background-color: #EAC435;
-  }
+body {
+  background-color: #EEF0F2;
+}
+
+nav {
+  padding: 1rem 0.75rem;
+}
+nav div.container {
+  justify-content: space-around;
+}
+nav div.container div.brand-container {
+  margin-right: 2.25rem;
+}
+nav div.container div.brand-container img {
+  margin-right: 0.5rem;
+  height: 30px;
+  cursor: pointer;
+}
+nav div.container div.brand-container h2 {
+  cursor: pointer;
+  font-size: 1.75rem;
+  font-family: "Bebas Neue";
+}
+nav div.container div.user-panel div h3 {
+  text-transform: uppercase;
+  font-family: "Lato";
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+nav div.container div.user-panel div h3 span {
+  color: #2f1465;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+nav div.container div.user-panel div p {
+  font-family: "Lato";
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  opacity: 65%;
+  text-decoration: underline;
+  text-align: right;
+  font-weight: 600;
+  cursor: pointer;
+}
+nav div.container div.user-panel img {
+  height: 30px;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  border: 3px solid #2f1465;
+}
+
+main h1 {
+  margin: 2rem 0rem 1rem;
+  font-size: 2rem;
+}
+main hr {
+  margin-bottom: 1rem;
+}
+main .issue-status, main .issue-assignee {
+  text-wrap: nowrap;
+  font-family: "Bebas Neue";
+  font-size: 1rem;
+}
+main .issue-status span, main .issue-assignee span {
+  background-color: #EEF0F2;
+  padding: 6px 10px;
+}
+main .issue-created {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  opacity: 0.25;
+}
+main .issue-summary {
+  font-family: "Poppins";
+  font-weight: 400;
+  text-transform: uppercase;
+}
+main .issue-summary span {
+  font-weight: 600;
+}
+main .created-on-date, main .created-by {
+  font-family: "Roboto Condensed";
+  opacity: 50%;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  text-align: right;
+  margin-left: 1rem;
+}
+main .universal-form {
+  margin: 1rem 0rem;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+main .universal-form label {
+  display: block;
+  font-family: "Bebas Neue";
+  margin: 0.25rem 0rem;
+}
+main .universal-form input, main .universal-form textarea {
+  width: 100%;
+  padding: 0.15rem 0.25rem;
+  font-family: "Poppins";
+  resize: none;
+  margin-bottom: 1rem;
+}
+main .universal-form span, main .universal-form li {
+  font-family: "Poppins";
+}
+main .universal-form textarea {
+  height: 10rem;
+}
+main .universal-form select {
+  padding: 0.15rem 0.25rem;
+  font-family: "Poppins";
+  margin-bottom: 1rem;
+}
+main .universal-form input[type=submit] {
+  margin-top: 1rem;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: "Bebas Neue";
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #313628;
+  border-right: 1px solid #313628;
+  cursor: pointer;
+}
+
+main#home-page {
+  background-image: url(/static/img/hero.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 87.5svh;
+  width: 100vw;
+}
+main#home-page div section.hero-section {
+  text-align: left;
+  width: 40%;
+  padding: 10% 1rem;
+}
+main#home-page div section.hero-section h1 {
+  font-size: 2rem;
+}
+main#home-page div section.hero-section h2 {
+  font-size: 1rem;
+  font-family: "Merriweather";
+  font-weight: 400;
+}
+main#home-page div button.button span {
+  background-color: #4DA167;
+}
+
+main#about-page {
+  background-image: url(/static/img/issue-bg.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+main#about-page div {
+  background-image: url(/static/img/arrow-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 2rem;
+}
+main#about-page div h1 {
+  text-align: center;
+}
+main#about-page div figure {
+  margin: 0rem 2rem;
+  width: 70%;
+}
+main#about-page div figure img {
+  width: 300px;
+}
+main#about-page div figure figcaption {
+  padding: 0rem 2rem;
+}
+main#about-page div figure figcaption h2 {
+  font-family: "Bebas Neue";
+  margin: 1rem 0rem;
+}
+main#about-page div figure figcaption p {
+  font-family: "Merriweather";
+}
+main#about-page div figure:nth-child(2) {
+  align-self: flex-end;
+}
+main#about-page div button.button {
+  align-self: center;
+  width: -moz-min-content;
+  width: min-content;
+  text-wrap: nowrap;
+}
+main#about-page div button.button span {
+  background-color: #4DA167;
+}
+
+main#issue-list-page {
+  padding-bottom: 2rem;
+}
+main#issue-list-page div.container h1 {
+  margin: 2rem 0rem 1rem;
+  font-size: 2rem;
+}
+main#issue-list-page div.container div#issue-control {
+  margin-bottom: 1rem;
+}
+main#issue-list-page div.container div#issue-control div h3 {
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+main#issue-list-page div.container div#issue-control div button.button {
+  margin: 0rem 0.25rem;
+}
+main#issue-list-page div.container div#issue-control button.create-issue {
+  align-self: flex-end;
+  margin: 0rem 0rem 2rem;
+}
+main#issue-list-page div.container div#issue-control button.create-issue span {
+  background-color: #4DA167;
+}
+main#issue-list-page div.container section div.todo-list, main#issue-list-page div.container section div.inprogress-list, main#issue-list-page div.container section div.done-list {
+  min-width: 20rem;
+}
+main#issue-list-page div.container section div.todo-list h2, main#issue-list-page div.container section div.inprogress-list h2, main#issue-list-page div.container section div.done-list h2 {
+  font-family: "Bebas Neue";
+  margin-bottom: 1rem;
+}
+main#issue-list-page div.container section div.todo-list article, main#issue-list-page div.container section div.inprogress-list article, main#issue-list-page div.container section div.done-list article {
+  cursor: pointer;
+  background-color: #FCF7FF;
+  border-bottom: 1px solid #313628;
+  border-right: 1px solid #313628;
+  margin: 0rem 0.5rem 0.5rem 0.5rem;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-priority, main#issue-list-page div.container section div.inprogress-list article div.issue-priority, main#issue-list-page div.container section div.done-list article div.issue-priority {
+  align-self: flex-start;
+  margin-left: 1rem;
+  height: 50%;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-priority h2, main#issue-list-page div.container section div.inprogress-list article div.issue-priority h2, main#issue-list-page div.container section div.done-list article div.issue-priority h2 {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-weight: 400;
+  writing-mode: vertical-lr;
+  padding: 1rem 0.25rem 0rem;
+}
+main#issue-list-page div.container section div.todo-list article .red, main#issue-list-page div.container section div.inprogress-list article .red, main#issue-list-page div.container section div.done-list article .red {
+  background-color: #CE4257;
+}
+main#issue-list-page div.container section div.todo-list article .yellow, main#issue-list-page div.container section div.inprogress-list article .yellow, main#issue-list-page div.container section div.done-list article .yellow {
+  background-color: #EAC435;
+}
+main#issue-list-page div.container section div.todo-list article .green, main#issue-list-page div.container section div.inprogress-list article .green, main#issue-list-page div.container section div.done-list article .green {
+  background-color: #4DA167;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-body, main#issue-list-page div.container section div.inprogress-list article div.issue-body, main#issue-list-page div.container section div.done-list article div.issue-body {
+  padding: 1rem;
+  width: 100%;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-body .issue-summary, main#issue-list-page div.container section div.inprogress-list article div.issue-body .issue-summary, main#issue-list-page div.container section div.done-list article div.issue-body .issue-summary {
+  margin: 1.5rem 0rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-body .issue-summary span, main#issue-list-page div.container section div.inprogress-list article div.issue-body .issue-summary span, main#issue-list-page div.container section div.done-list article div.issue-body .issue-summary span {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-body h2.issue-assignee, main#issue-list-page div.container section div.inprogress-list article div.issue-body h2.issue-assignee, main#issue-list-page div.container section div.done-list article div.issue-body h2.issue-assignee {
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  margin: 0.5rem 0rem;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-body h3.issue-status, main#issue-list-page div.container section div.inprogress-list article div.issue-body h3.issue-status, main#issue-list-page div.container section div.done-list article div.issue-body h3.issue-status {
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-size: 0.65rem;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set {
+  align-self: flex-end;
+  margin: 2rem 0rem 0.5rem;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set button.button, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set button.button, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set button.button {
+  margin: 0rem 0.5rem;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set button.button:nth-child(2) span, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set button.button:nth-child(2) span, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set button.button:nth-child(2) span {
+  background-color: #EAC435;
+}
+main#issue-list-page div.container section div.todo-list article div.issue-body div.button-set button.button:nth-child(3) span, main#issue-list-page div.container section div.inprogress-list article div.issue-body div.button-set button.button:nth-child(3) span, main#issue-list-page div.container section div.done-list article div.issue-body div.button-set button.button:nth-child(3) span {
+  background-color: #CE4257;
+}
+main#issue-list-page div.container section div.todo-list article:hover, main#issue-list-page div.container section div.inprogress-list article:hover, main#issue-list-page div.container section div.done-list article:hover {
+  scale: 1.02;
+}
+main#issue-list-page div.container div button.button {
+  margin: 1rem 0rem;
+}
+main#issue-list-page div.container .not-authenticated p {
+  font-family: "Bebas Neue";
+}
+main#issue-list-page div.container .not-authenticated button.button {
+  margin: 1rem 0.5rem;
+}
+main#issue-list-page div.container .not-authenticated button.button span {
+  background-color: #4DA167;
+}
+
+main#detail-issue-page div.container {
+  width: 75%;
+  margin-top: 2rem;
+}
+main#detail-issue-page div.container div.detail-head p {
+  font-size: 0.75rem;
+  font-family: "Poppins";
+  text-transform: uppercase;
+}
+main#detail-issue-page div.container div.detail-head p span {
+  font-weight: 600;
+}
+main#detail-issue-page div.container div.detail-body {
+  margin: 2rem 0rem 1rem;
+}
+main#detail-issue-page div.container div.detail-body h2 {
+  font-family: "Bebas Neue";
+}
+main#detail-issue-page div.container div.detail-body p.detail-description {
+  font-family: "Merriweather";
+  margin: 1rem 0rem;
+  padding: 0rem 2rem;
+}
+main#detail-issue-page div.container div.button-set {
+  justify-content: flex-end;
+  margin-right: 4rem;
+}
+main#detail-issue-page div.container div.button-set button {
+  margin: 0rem 0.5rem;
+}
+main#detail-issue-page div.container div.button-set button:nth-child(1) span {
+  background-color: #EAC435;
+}
+main#detail-issue-page div.container div.button-set button:nth-child(2) span {
+  background-color: #CE4257;
+}
+
+main#logout-page div.container h1, main#login-page div.container h1, main#delete-issue-page div.container h1, main#update-issue-page div.container h1 {
+  font-family: "Bebas Neue";
+}
+main#logout-page div.container p, main#login-page div.container p, main#delete-issue-page div.container p, main#update-issue-page div.container p {
+  font-family: "Bebas Neue";
+  font-size: 1rem;
+}
+main#logout-page div.container input[type=submit], main#login-page div.container input[type=submit], main#delete-issue-page div.container input[type=submit], main#update-issue-page div.container input[type=submit] {
+  background-color: #FCF7FF;
+}
+main#logout-page div.container button.button, main#login-page div.container button.button, main#delete-issue-page div.container button.button, main#update-issue-page div.container button.button {
+  margin: 1rem 0rem;
+}
+main#logout-page div.container button.button span, main#login-page div.container button.button span, main#delete-issue-page div.container button.button span, main#update-issue-page div.container button.button span {
+  background-color: #EAC435;
 }/*# sourceMappingURL=base.css.map */
